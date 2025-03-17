@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Arcade de Jogos"/>
+        <attribute name="authors" value="RYAN CAVALCANTI"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-03-16 10:39:10 "/>
+        <attribute name="created" value="UllBTiBDQVZBTENBTlRJO1JZQU47MjAyNS0wMy0xNjsiMDk6NDE6MzUgIjsyNTgy"/>
+        <attribute name="edited" value="UllBTiBDQVZBTENBTlRJO1JZQU47MjAyNS0wMy0xNjsiMTA6Mzk6MTAgIjsxOzI2ODI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="opcao" type="Integer" array="False" size=""/>
+            <output expression="&quot;Arcade De Jogos&quot;" newline="True"/>
+            <output expression="&quot;1: Pergunta e Resposta&quot;" newline="True"/>
+            <output expression="&quot;2: Cobra na Caixa&quot;" newline="True"/>
+            <output expression="&quot;3: Gousmas War&quot;" newline="True"/>
+            <output expression="&quot;4: Sair&quot;" newline="True"/>
+            <input variable="opcao"/>
+            <while expression="opcao &lt;&gt; 4">
+                <if expression="opcao = 1">
+                    <then>
+                        <call expression="perguntaResposta"/>
+                    </then>
+                    <else>
+                        <if expression="opcao = 2">
+                            <then>
+                                <call expression="cobraNaCaixa"/>
+                            </then>
+                            <else>
+                                <if expression="opcao = 3">
+                                    <then>
+                                        <call expression="gousmaWar"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+    <function name="cobraNaCaixa" type="None" variable="">
+        <parameters/>
+        <body/>
+    </function>
+    <function name="gousmaWar" type="None" variable="">
+        <parameters/>
+        <body/>
+    </function>
+    <function name="perguntaResposta" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pergunta" type="String" array="True" size="5"/>
+            <declare name="opcao1" type="String" array="True" size="5"/>
+            <declare name="opcao2" type="String" array="True" size="5"/>
+            <declare name="opcao3" type="String" array="True" size="5"/>
+            <declare name="opcao4" type="String" array="True" size="5"/>
+            <declare name="resposta" type="Integer" array="True" size="5"/>
+            <declare name="respostaUsuario" type="Integer" array="False" size=""/>
+            <declare name="pontuacao" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <declare name="continuar" type="Integer" array="False" size=""/>
+            <output expression="&quot;Bem vindo ao Pergunta e Resposta&quot;" newline="True"/>
+            <output expression="&quot;pontuacao = 0&quot;" newline="True"/>
+            <assign variable="pontuacao" expression="0"/>
+            <assign variable="pergunta[1]" expression="&quot;Qual a capital do Brasil?&quot;"/>
+            <assign variable="opcao1[1]" expression="&quot;a) S&#227;o Paulo&quot;"/>
+            <assign variable="opcao2[1]" expression="&quot;b) Brasilia&quot;"/>
+            <assign variable="opcao3[1]" expression="&quot;c) Rio de Janeiro&quot;"/>
+            <assign variable="opcao4[1]" expression="&quot;d) Salvador&quot;"/>
+            <assign variable="resposta[1]" expression="opcao2[1]"/>
+            <assign variable="pergunta[2]" expression="&quot;Qual Maior Planeta do Sistema Solar&quot;"/>
+            <assign variable="opcao1[2]" expression=""/>
+            <assign variable="ocpao2[2]" expression=""/>
+            <assign variable="opcao3[2]" expression=""/>
+            <assign variable="opcao4[2]" expression=""/>
+            <assign variable="resposta[2]" expression="opcao3[2]"/>
+            <assign variable="pergunta[3]" expression="&quot;Quem pintou a Mona lisa&quot;"/>
+            <assign variable="" expression=""/>
+            <assign variable="" expression=""/>
+            <assign variable="" expression=""/>
+            <assign variable="" expression=""/>
+            <assign variable="resposta[3]" expression="opcao2[3]"/>
+            <assign variable="pergunta[4]" expression="&quot;Qual Simbolo quimico do cobre&quot;"/>
+            <assign variable="" expression=""/>
+            <assign variable="" expression=""/>
+            <assign variable="" expression=""/>
+            <assign variable="" expression=""/>
+            <assign variable="resposta[4]" expression="opcao1[4]"/>
+            <assign variable="pergunta[5]" expression="&quot;Qual o menor pa&#237;s do mundo&quot;"/>
+            <assign variable="" expression=""/>
+            <assign variable="" expression=""/>
+            <assign variable="" expression=""/>
+            <assign variable="" expression=""/>
+            <assign variable="resposta[5]" expression="ocpao4[5]"/>
+            <for variable="i" start="1" end="5" direction="inc" step="1">
+                <output expression="pergunta[i]" newline="True"/>
+                <output expression="opcao1[i]" newline="True"/>
+                <output expression="opcao2[i]" newline="True"/>
+                <output expression="opcao3[i]" newline="True"/>
+                <output expression="opcao4[i]" newline="True"/>
+                <input variable="respostaUsuario"/>
+                <if expression="">
+                    <then/>
+                    <else/>
+                </if>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
