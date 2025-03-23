@@ -5,7 +5,7 @@ Este projeto tem como objetivo desenvolver um arcade de minijogos utilizando **F
 
 ## Como Executar
 1. Abra o Executável do jogo.
-2.Escolha uma das opções do menu:
+2. Escolha uma das opções do menu:
    - `1: Pergunta e Resposta`
    - `2: Cobra na Caixa`
    - `3: Gousmas War`
