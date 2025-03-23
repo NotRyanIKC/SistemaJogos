@@ -1,7 +1,7 @@
 # Arcade de Jogos
 
 ## Introdução
-Este projeto tem como objetivo desenvolver um arcade de minijogos utilizando **Flowgorithm**. O sistema apresenta um menu interativo no console, permitindo que os jogadores escolham entre três minijogos diferentes ou saiam do jogo. O projeto reforça conceitos de **algoritmos** e **raciocínio lógico**.
+Este projeto tem como objetivo desenvolver um arcade de minijogos utilizando **A Linguagem C**. O sistema apresenta um menu interativo no console, permitindo que os jogadores escolham entre três minijogos diferentes ou saiam do jogo. O projeto reforça conceitos de **algoritmos** e **raciocínio lógico**.
 
 ## Como Executar
 1. Abra o Executável do jogo.
