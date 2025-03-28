@@ -3,10 +3,6 @@
 #include <time.h>
 #include <stdbool.h>
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
-
 #define MAX_GOUSMAS 2
 #define MAX_FURIA 5
 
@@ -30,14 +26,14 @@ typedef struct {
     Gousma gousmas[MAX_GOUSMAS];
 } Jogador;
 
-void iniciar_jogador(Jogador *jogador) {
+void iniciarJogador(Jogador *jogador) {
     jogador->gousmas[0].furia = 1;
     jogador->gousmas[0].ativa = true;
     jogador->gousmas[1].furia = 1;
     jogador->gousmas[1].ativa = true;
 }
 
-void mostrar_status(Jogador *j1, Jogador *j2) {
+void mostrarStatus(Jogador *j1, Jogador *j2) {
     printf("\nStatus:\n");
     printf("Jogador 1: ");
     for (int i = 0; i < MAX_GOUSMAS; i++)
@@ -111,7 +107,7 @@ void dividirGousma(Jogador *jogador) {
            g_origem + 1, jogador->gousmas[g_origem].furia, g_nova + 1, jogador->gousmas[g_nova].furia);
 }
 
-bool verificar_fim(Jogador *j1, Jogador *j2) {
+bool verificarFim(Jogador *j1, Jogador *j2) {
     bool j1_vivo = j1->gousmas[0].ativa || j1->gousmas[1].ativa;
     bool j2_vivo = j2->gousmas[0].ativa || j2->gousmas[1].ativa;
     
@@ -126,14 +122,14 @@ bool verificar_fim(Jogador *j1, Jogador *j2) {
     return false;
 }
 
-void iniciar_jogo() {
+void jogoGousma() {
     Jogador jogador1, jogador2;
-    iniciar_jogador(&jogador1);
-    iniciar_jogador(&jogador2);
+    iniciarJogador(&jogador1);
+    iniciarJogador(&jogador2);
     
     int turno = 1;
     while (true) {
-        mostrar_status(&jogador1, &jogador2);
+        mostrarStatus(&jogador1, &jogador2);
         printf("Vez do Jogador %d. Escolha:\n1 - Atacar\n2 - Passar turno\n3 - Dividir Gousma\n", turno);
         int escolha;
         scanf("%d", &escolha);
@@ -151,7 +147,7 @@ void iniciar_jogo() {
             continue;
         }
         
-        if (verificar_fim(&jogador1, &jogador2)) break;
+        if (verificarFim(&jogador1, &jogador2)) break;
         turno = 3 - turno;
     }
     
@@ -223,6 +219,8 @@ void cobraNaCaixa() {
     jogarNovamente(cobraNaCaixa);
 }
 
+
+
 int main() {
     int escolha;
     do {
@@ -242,7 +240,7 @@ int main() {
                 cobraNaCaixa();
                 break;
             case 3:
-                iniciar_jogo();
+                jogoGousma();
                 break;
             case 4:
                 printf("Saindo do jogo...\n");
