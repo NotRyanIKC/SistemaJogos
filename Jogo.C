@@ -47,6 +47,16 @@ void dividir(Gousma *gousma1, Gousma *gousma2) {
 int verificaDerrota(Gousma gousmas[]) {
     return !(gousmas[0].ativa || gousmas[1].ativa);
 }
+void jogarNovamente(void (*jogo)()) {
+    char resposta;
+    do {
+        printf("Deseja jogar novamente? (s/n): ");
+        scanf(" %c", &resposta);
+        if (resposta == 's' || resposta == 'S') {
+            jogo();
+        }
+    } while (resposta == 's' || resposta == 'S');
+}
 
 void jogoGousmas() {
     Gousma jogador1Gousmas[2] = {{1, 1}, {1, 1}};
@@ -87,7 +97,9 @@ void jogoGousmas() {
         }
 
         turno = (turno == 1) ? 2 : 1;
+        
     }
+    jogarNovamente(jogoGousmas);
 }
 
 void perguntaEResposta() {
@@ -113,6 +125,7 @@ void perguntaEResposta() {
         }
     }
     printf("\nVoce acertou %d de 5 perguntas.\n", pontuacao);
+    jogarNovamente(perguntaEResposta);
 }
 
 void cobraNaCaixa() {
@@ -151,7 +164,10 @@ void cobraNaCaixa() {
             turno = 1 - turno;
         }
     } while (1);
+    jogarNovamente(cobraNaCaixa);
 }
+
+
 
 int main() {
     int escolha;
